@@ -18,8 +18,6 @@ import VarietyScreen from "../screens/VarietyScreen";
 import CommercialScreen from "../screens/CommercialScreen";
 
 const DiseaseStack = createNativeStackNavigator();
-const QualityPriceStack = createNativeStackNavigator();
-const VarietyCommercialStack = createNativeStackNavigator();
 function DiseaseStackNavigator() {
   return (
     <DiseaseStack.Navigator>
@@ -42,13 +40,16 @@ function DiseaseStackNavigator() {
   );
 }
 
+const QualityPriceStack = createNativeStackNavigator();
+const VarietyCommercialStack = createNativeStackNavigator();
+
 function QualityPriceStackNavigator() {
   return (
     <QualityPriceStack.Navigator>
       <QualityPriceStack.Screen
         name="QualityPriceHome"
         component={QualityPriceScreen}
-        options={{ title: "Quality & Price" }}
+        options={{ title: "Quality & Price", headerShown: false }}
       />
       <QualityPriceStack.Screen
         name="QualityScreen"
@@ -70,7 +71,7 @@ function VarietyCommercialStackNavigator() {
       <VarietyCommercialStack.Screen
         name="VarietyCommercialHome"
         component={VarietyCommercialScreen}
-        options={{ title: "Variety & Commercial" }}
+        options={{ title: "Variety & Commercial", headerShown: false }}
       />
       <VarietyCommercialStack.Screen
         name="VarietyScreen"
